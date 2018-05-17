@@ -1,0 +1,66 @@
+import java.util.*;
+
+public class GuessingGame{
+
+	int secret;
+	Scanner scan;
+	boolean won;
+	int guess;
+
+	public GuessingGame(){
+		scan = new Scanner(System.in);
+	}
+
+	public void playGame(){
+		won = false;	// if second time, needs to be reset
+		guess = 0;	// ""
+		generateSecretNumber();
+		while(!won ){
+			obtainUserGuess();		
+			if (checkIfWon()){
+				System.out.println("You won!");
+				break;
+			}
+			System.out.println(checkTooHighLow());
+		}
+
+	}
+	public void generateSecretNumber(){
+		secret = (int)(Math.random()*100+1);
+	}
+	public void obtainUserGuess(){
+		System.out.println("Guess a number (1-100): ");
+		guess = scan.nextInt(); 
+		if(guess <= 0 || guess > 100){
+			System.out.println("Number is out of range.");
+		}
+	}
+	
+	public boolean checkIfWon(){
+		if(guess == secret){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public String checkTooHighLow(){
+		String temp = "";
+		if(guess>secret){
+			temp =  "Too high!";
+		}else if(guess<secret){
+			temp = "Too low!";
+		}
+		return temp;
+	}
+
+	public static void main(String[] args){
+
+		GuessingGame gg = new GuessingGame();
+		gg.playGame();
+
+	}	
+}
+
+
+
+

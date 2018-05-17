@@ -1,0 +1,44 @@
+IT 114 Project
+
+Due: 12-12-17 (last class meeting)
+
+
+
+Use the given files to create a complete chat system. The files you may
+
+use can be found in: 
+
+
+
+https://web.njit.edu/~theo/courses/it114/download/project/
+
+
+
+Points:
+
+
+
+Given files: 40
+
+Use card layout to obtain name from user: 10
+
+Prepend name to messages: 10
+
+Announce entrances and exits: 10
+
+Working user list: 15
+
+Private messages: 15
+
+
+
+Total points: 100
+
+
+
+If you base your project on code other than the code given in class: 0
+
+
+Extra credit (Only if you successfully complete all of the above.): 
+
+emoticons/emojis
